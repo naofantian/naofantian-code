@@ -14,7 +14,7 @@
 FTCPClient::FTCPClient( void )
 {
 	bAngleDirty = FALSE;
-	curAngle = 0;
+	curAngle = 0.0;
 	curGameState = ES_Connecting;
 	angleUpdateTime = 0; 
 }
@@ -38,14 +38,10 @@ UBOOL FTCPClient::Connect( void )
 
 
 //设置旋转角度(0~360)
-void FTCPClient::SetRotateAngle( INT angle )
+void FTCPClient::SetRotateAngle( DOUBLE angle )
 {
-	if ( angle != curAngle )
-	{
-		curAngle = angle;
-		bAngleDirty = TRUE;
-	}
-
+	curAngle = angle;
+	bAngleDirty = TRUE;
 }
 //设置振动等级
 void FTCPClient::SetCollideLevel( ECollideLevel level )
@@ -155,7 +151,7 @@ void FTCPClient::Tick( void )
 		if ( deltTime >= 200 || deltTime < 0 )
 		{
 			ZeroMemory( buf, MAXDATASIZE );
-			sprintf_s( buf, MAXDATASIZE, "XH_ROTATION#%d", curAngle );
+			sprintf_s( buf, MAXDATASIZE, "XH_ROTATION#%f", curAngle );
 			Client_Send( buf ); 
 			bAngleDirty = FALSE;
 			angleUpdateTime = nowTime;

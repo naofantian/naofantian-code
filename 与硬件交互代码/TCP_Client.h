@@ -29,7 +29,7 @@ public:
 	//连接服务器
 	UBOOL Connect( void );
 	//设置旋转角度(正值为顺时针角度，负值为逆时针角度)
-	void SetRotateAngle( INT angle );
+	void SetRotateAngle( DOUBLE angle );
 	//设置振动等级
 	void SetCollideLevel( ECollideLevel level );
 	//游戏结束
@@ -48,7 +48,7 @@ protected:
 	void logError( char *pError );
 
 private:
-	INT   curAngle;        //当前的旋转角度
+	DOUBLE curAngle;       //当前的旋转角度
 	UBOOL bAngleDirty;     //是否需要更新角度
 	DWORD angleUpdateTime; //角度更新的时间
 

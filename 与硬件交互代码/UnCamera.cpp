@@ -247,8 +247,8 @@ void ACamera::ModifyRollNotify( INT curRoll )
 {
 	if ( curRoll == cacheRoll )
 		return;
-	FLOAT deltAngle = FLOAT( curRoll ) * TOANGLERATIO;
-	GTCPClient.SetRotateAngle( appRound( deltAngle ) );
+	DOUBLE deltAngle = DOUBLE( curRoll ) * TOANGLERATIO;
+	GTCPClient.SetRotateAngle( deltAngle );
 	cacheRoll = curRoll;
 }
 
