@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="BuiltWithUnrealBuildTool|Win32">
+      <Configuration>BuiltWithUnrealBuildTool</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="BuiltWithUnrealBuildTool|Xbox 360">
+      <Configuration>BuiltWithUnrealBuildTool</Configuration>
+      <Platform>Xbox 360</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{3933DD39-0C20-494C-9A48-BD319A2F55E6}</ProjectGuid>
+    <RootNamespace>ExampleGame</RootNamespace>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccProvider>
+    </SccProvider>
+    <Keyword>MakeFileProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'" Label="Configuration">
+    <ConfigurationType>Makefile</ConfigurationType>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'">..\..\Intermediate\Unused\</OutDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'">..\..\Intermediate\Unused\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'">..\..\Intermediate\Unused\</IntDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'">..\..\Intermediate\Unused\</IntDir>
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'" />
+    <NMakeBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'" />
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'" />
+    <NMakeReBuildCommandLine Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'" />
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'" />
+    <NMakeCleanCommandLine Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'" />
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'" />
+    <NMakeOutput Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'" />
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'">$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakePreprocessorDefinitions Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'">$(NMakePreprocessorDefinitions)</NMakePreprocessorDefinitions>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'">$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeIncludeSearchPath Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'">$(NMakeIncludeSearchPath)</NMakeIncludeSearchPath>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeForcedIncludes Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'">$(NMakeForcedIncludes)</NMakeForcedIncludes>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeAssemblySearchPath Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'">$(NMakeAssemblySearchPath)</NMakeAssemblySearchPath>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Win32'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+    <NMakeForcedUsingAssemblies Condition="'$(Configuration)|$(Platform)'=='BuiltWithUnrealBuildTool|Xbox 360'">$(NMakeForcedUsingAssemblies)</NMakeForcedUsingAssemblies>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="..\..\..\ExampleGame\Config\Xbox360\Xbox360Editor.ini" />
+    <None Include="..\..\..\ExampleGame\Config\Xbox360\Xbox360Engine.ini" />
+    <None Include="..\..\..\ExampleGame\Config\Xbox360\Xbox360Game.ini" />
+    <None Include="..\..\..\ExampleGame\Config\Xbox360\Xbox360Input.ini" />
+    <None Include="Classes\ArcadeGameEngine.uc" />
+    <None Include="Classes\ArcadeGameInfo.uc" />
+    <None Include="Classes\ArcadeHUD.uc" />
+    <None Include="Classes\ArcadePlayerController.uc" />
+    <None Include="Classes\ArcadePlayerInput.uc" />
+    <None Include="Classes\ArcadeProjectile.uc" />
+    <None Include="Classes\Cockpit.uc" />
+    <None Include="Classes\ExampleGameInfo.uc" />
+    <None Include="Classes\ExamplePawn.uc" />
+    <None Include="Classes\ExamplePlayerController.uc" />
+    <None Include="..\..\..\ExampleGame\Localization\Int\ExampleGame.int" />
+    <None Include="Classes\ITargetable.uc" />
+    <None Include="Classes\PlaneCamera.uc" />
+    <None Include="Classes\PlayerPlane.uc" />
+    <None Include="Classes\SkeletalMeshTargetable.uc" />
+    <None Include="Classes\StaticMeshTargetable.uc" />
+    <None Include="Live\ExampleGame.PNG" />
+    <None Include="Live\ExampleGame.spa" />
+    <None Include="Live\ExampleGame.xlast" />
+    <None Include="Live\ExampleGameLarge.png" />
+    <None Include="Live\GamerPicLarge.png" />
+    <None Include="Live\GamerPicSmall.png" />
+    <None Include="Live\LiveConfig.xml" />
+    <None Include="Live\xex.xml" />
+    <None Include="..\..\..\ExampleGame\Config\DefaultCompat.ini" />
+    <None Include="..\..\..\ExampleGame\Config\DefaultEditor.ini" />
+    <None Include="..\..\..\ExampleGame\Config\DefaultEditorKeyBindings.ini" />
+    <None Include="..\..\..\ExampleGame\Config\DefaultEditorUserSettings.ini" />
+    <None Include="..\..\..\ExampleGame\Config\DefaultEngine.ini" />
+    <None Include="..\..\..\ExampleGame\Config\DefaultGame.ini" />
+    <None Include="..\..\..\ExampleGame\Config\DefaultInput.ini" />
+    <None Include="..\..\..\ExampleGame\Config\DefaultLightmass.ini" />
+    <None Include="..\..\..\ExampleGame\Config\DefaultUI.ini" />
+    <None Include="..\..\..\ExampleGame\Config\PS3\PS3Engine.ini" />
+    <None Include="..\..\..\ExampleGame\Config\PS3\PS3Game.ini" />
+    <None Include="..\..\..\ExampleGame\Config\PS3\PS3Input.ini" />
+    <None Include="..\..\..\ExampleGame\Config\PCServer\PCServerEngine.ini" />
+    <None Include="..\..\..\ExampleGame\Config\PCServer\PCServerGame.ini" />
+    <None Include="..\..\..\ExampleGame\Config\PCServer\PCServerInput.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Src\ArcadeEngine.cpp" />
+    <ClCompile Include="Src\ExampleGame.cpp" />
+    <ClCompile Include="Src\NullSurveys.cpp" />
+    <ClCompile Include="Src\TCP_Client.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Inc\Client.h" />
+    <ClInclude Include="Inc\ExampleGame.h" />
+    <ClInclude Include="Inc\ExampleGameClasses.h" />
+    <ClInclude Include="Inc\ExampleGameNames.h" />
+    <ClInclude Include="Inc\TCP_Client.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
