@@ -1,9 +1,10 @@
 //-----------------------------------------------------------
 //HanJiping.hanwukong@126.com
 //-----------------------------------------------------------
-class ArcadeHUD extends HUD;
+class ArcadeHUD extends MobileHUD;
 
 var config bool bDebugRot;
+var config float AimDrawSize;
 
 struct TargetAimInfo
 {
@@ -12,6 +13,9 @@ struct TargetAimInfo
 };
 
 var transient array<TargetAimInfo> TargetAimInfos;
+
+var Material LeftAimMat;
+var Material RightAimMat;
 
 /**
  * The start of the rendering chain.
@@ -117,8 +121,10 @@ function RenderAim()
     local ArcadePlayerController APC;
 
 	APC = ArcadePlayerController(PlayerOwner);
-	RenderBrackets(APC.LeftAim, APC.AimRadius,  MakeColor(255,0,0,255));
-	RenderBrackets(APC.RightAim, APC.AimRadius, MakeColor(255,0,0,255));
+	Canvas.SetPos(APC.LeftAim.X-AimDrawSize, APC.LeftAim.Y-AimDrawSize);
+	Canvas.DrawMaterialTile(LeftAimMat, AimDrawSize*2.0,AimDrawSize*2.0,0,0,1,1);
+	Canvas.SetPos(APC.RightAim.X-AimDrawSize, APC.RightAim.Y-AimDrawSize);
+	Canvas.DrawMaterialTile(RightAimMat, AimDrawSize*2.0,AimDrawSize*2.0,0,0,1,1);
 }
 
 /** Aim Test */
@@ -288,6 +294,7 @@ function Box GetTwoDeeActorBoundingBox(Actor Actor)
 
 defaultproperties
 {
-
+    LeftAimMat=Material'PlaneHUD.Mat_Aim'
+    RightAimMat=Material'PlaneHUD.Mat_Aim1'
 }
 

@@ -31,6 +31,9 @@ var() const float PitchMultiplier;
 /** Aim Socket */
 var() const name AimSocket;
 
+/** Hidden Mesh After Destroy */
+var() const float HiddenMeshTime;
+
 /** Health */
 var() int Health;
 
@@ -108,11 +111,20 @@ function PlayDestroy()
     if(DestroyAnimName != 'None')
     {
         SkeletalMeshComponent.PlayAnim(DestroyAnimName);
-        LifeSpan = SkeletalMeshComponent.GetAnimLength(DestroyAnimName);
+        if(HiddenMeshTime>=0)
+        {
+            SetTimer(SkeletalMeshComponent.GetAnimLength(DestroyAnimName)+HiddenMeshTime, false, 'HiddenMesh');
+        }
         SetCollisionType(COLLIDE_NoCollision);
     }
 
     bDestroyed = true;
+}
+
+function HiddenMesh()
+{
+    SkeletalMeshComponent.SetHidden(true);
+    SetCollisionType(COLLIDE_NoCollision);
 }
 
 event TakeDamage(int DamageAmount, Controller EventInstigator, vector HitLocation, vector Momentum, class<DamageType> DamageType, optional TraceHitInfo HitInfo, optional Actor DamageCauser)
@@ -157,4 +169,5 @@ DefaultProperties
     PitchMultiplier=1.0
 
     Physics=PHYS_Interpolating
+    HiddenMeshTime=-1
 }
